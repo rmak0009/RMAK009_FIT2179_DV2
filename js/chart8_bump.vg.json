@@ -1,0 +1,115 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 350,
+  "data": {
+    "url": "data/crops_state.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.state != 'Malaysia' && datum.state != 'W.P. Kuala Lumpur' && datum.state != 'W.P. Labuan' && datum.crop_type != 'flower'"
+    },
+    {
+      "calculate": "year(toDate(datum.date))",
+      "as": "year"
+    },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "production", "as": "total_production"}
+      ],
+      "groupby": ["state", "year"]
+    },
+    {
+      "window": [
+        {"op": "rank", "as": "rank"}
+      ],
+      "sort": [{"field": "total_production", "order": "descending"}],
+      "groupby": ["year"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2,
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "labelFontSize": 11,
+            "grid": false,
+            "ticks": false,
+            "domain": false
+          }
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative",
+          "title": "Rank",
+          "sort": "descending",
+          "scale": {"domain": [1, 13]},
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "tickCount": 13,
+            "gridColor": "#F0EDE6",
+            "gridDash": [3, 3]
+          }
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "legend": null
+        },
+        "detail": {"field": "state", "type": "nominal"},
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "rank", "type": "quantitative", "title": "Rank"},
+          {"field": "total_production", "type": "quantitative", "title": "Production (tonnes)", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 50},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "rank", "type": "quantitative", "sort": "descending"},
+        "color": {"field": "state", "type": "nominal", "legend": null}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 9,
+        "font": "DM Sans, sans-serif"
+      },
+      "transform": [
+        {"filter": "datum.year == 2022"}
+      ],
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "rank", "type": "quantitative", "sort": "descending"},
+        "text": {"field": "state", "type": "nominal"},
+        "color": {"field": "state", "type": "nominal", "legend": null}
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": {"stroke": "transparent"},
+    "font": "DM Sans, sans-serif"
+  }
+}

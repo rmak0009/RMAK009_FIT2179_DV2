@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/FAOSTAT_data_en_5-14-2026.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Year == '2022' && (datum.Element == 'Export quantity' || datum.Element == 'Import quantity')"
+    },
+    {
+      "filter": "datum.Item != 'Food Excluding Fish' && datum.Item != 'Fruit and Vegetables' && datum.Item != 'Meat and Meat Preparations' && datum.Item != 'Dairy Products, milk equivalent'"
+    },
+    {
+      "calculate": "datum.Item == 'Vegetable Oil and Fat' && datum.Element == 'Export quantity' ? 'Palm Oil Exports' : datum.Element == 'Import quantity' ? 'Food Imports' : null",
+      "as": "trade_type"
+    },
+    {
+      "filter": "datum.trade_type != null"
+    },
+    {
+      "calculate": "datum.Item == 'Beef and Buffalo Meat, primary' || datum.Item == 'Sheep and Goat Meat' || datum.Item == 'Poultry Meat' || datum.Item == 'Other Meat' || datum.Item == 'Meat, Poultry' ? 'Meat' : datum.Item == 'Dairy Products' || datum.Item == 'Eggs' ? 'Dairy & Eggs' : datum.Item == 'Fruit' || datum.Item == 'Vegetables' ? 'Fruit & Veg' : datum.Item == 'Vegetable Oil and Fat' ? 'Oils & Fats' : 'Other'",
+      "as": "category"
+    },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Value", "as": "total_qty"}
+      ],
+      "groupby": ["category", "trade_type"]
+    },
+    {
+      "calculate": "datum.total_qty / 1000000",
+      "as": "qty_millions"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelFont": "DM Sans, sans-serif",
+        "labelColor": "#5F5E5A",
+        "labelFontSize": 11,
+        "ticks": false,
+        "domain": false,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "qty_millions",
+      "type": "quantitative",
+      "title": "Quantity (million tonnes)",
+      "axis": {
+        "labelFont": "DM Sans, sans-serif",
+        "titleFont": "DM Sans, sans-serif",
+        "labelColor": "#5F5E5A",
+        "titleColor": "#5F5E5A",
+        "gridColor": "#F0EDE6",
+        "gridDash": [3, 3],
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "trade_type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Palm Oil Exports", "Food Imports"],
+        "range": ["#E07B00", "#0072B2"]
+      },
+      "legend": {
+        "title": null,
+        "labelFont": "DM Sans, sans-serif",
+        "labelFontSize": 11,
+        "orient": "top-right"
+      }
+    },
+    "xOffset": {
+      "field": "trade_type",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "category", "type": "nominal", "title": "Category"},
+      {"field": "trade_type", "type": "nominal", "title": "Type"},
+      {"field": "qty_millions", "type": "quantitative", "title": "Quantity (million tonnes)", "format": ".2f"}
+    ]
+  },
+  "config": {
+    "background": "#FFFFFF",
+    "view": {"stroke": "transparent"},
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    }
+  }
+}

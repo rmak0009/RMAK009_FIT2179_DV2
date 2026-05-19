@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 350,
+  "data": {
+    "url": "data/map_crop_data.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.state != 'Kuala Lumpur' && datum.state != 'Labuan' && datum.state != 'Putrajaya'"
+    },
+    {
+      "fold": ["paddy_production", "fruits_production", "vegetables_production", "coconut_production", "cash_crops_production", "industrial_crops_production", "spices_production", "herbs_production"],
+      "as": ["crop_type", "production"]
+    },
+    {
+      "calculate": "datum.crop_type == 'paddy_production' ? 'Paddy' : datum.crop_type == 'fruits_production' ? 'Fruits' : datum.crop_type == 'vegetables_production' ? 'Vegetables' : datum.crop_type == 'coconut_production' ? 'Coconut' : datum.crop_type == 'cash_crops_production' ? 'Cash Crops' : datum.crop_type == 'industrial_crops_production' ? 'Industrial Crops' : datum.crop_type == 'spices_production' ? 'Spices' : 'Herbs'",
+      "as": "crop_label"
+    },
+    {
+      "calculate": "datum.production / 1000",
+      "as": "production_thousands"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 2,
+    "cornerRadiusTopRight": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "state",
+      "type": "nominal",
+      "title": "State",
+      "sort": {"field": "total_production", "order": "descending"},
+      "axis": {
+        "labelAngle": -35,
+        "labelFont": "DM Sans, sans-serif",
+        "labelColor": "#5F5E5A",
+        "labelFontSize": 10,
+        "titleColor": "#5F5E5A",
+        "ticks": false,
+        "domain": false
+      }
+    },
+    "y": {
+      "field": "production_thousands",
+      "type": "quantitative",
+      "title": "Production (000 tonnes)",
+      "axis": {
+        "labelFont": "DM Sans, sans-serif",
+        "titleFont": "DM Sans, sans-serif",
+        "labelColor": "#5F5E5A",
+        "titleColor": "#5F5E5A",
+        "gridColor": "#F0EDE6",
+        "gridDash": [3, 3],
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "crop_label",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Paddy", "Fruits", "Vegetables", "Coconut", "Cash Crops", "Industrial Crops", "Spices", "Herbs"],
+        "range": ["#FAC775", "#5DCAA5", "#C0DD97", "#F2A98A", "#85B7EB", "#3B6D11", "#C4BFEE", "#F5C4B3"]
+      },
+      "legend": {
+        "title": "Crop Type",
+        "labelFont": "DM Sans, sans-serif",
+        "titleFont": "DM Sans, sans-serif",
+        "labelFontSize": 10,
+        "orient": "right"
+      }
+    },
+    "tooltip": [
+      {"field": "state", "type": "nominal", "title": "State"},
+      {"field": "crop_label", "type": "nominal", "title": "Crop Type"},
+      {"field": "production_thousands", "type": "quantitative", "title": "Production (000 tonnes)", "format": ",.1f"}
+    ]
+  },
+  "config": {
+    "background": "#FFFFFF",
+    "view": {"stroke": "transparent"},
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    }
+  }
+}

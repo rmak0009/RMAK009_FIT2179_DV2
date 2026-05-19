@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can Malaysia Feed Itself?</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-bg-deco"></div>
+
+    <!-- floating food doodles — scattered everywhere -->
+    <span class="deco d1">🌾</span>
+    <span class="deco d2">🍍</span>
+    <span class="deco d3">🥥</span>
+    <span class="deco d4">🐟</span>
+    <span class="deco d5">🍍</span>
+    <span class="deco d6">🌿</span>
+    <span class="deco d7">🥩</span>
+    <span class="deco d8">🌾</span>
+    <span class="deco d9">🌶️</span>
+    <span class="deco d10">🥦</span>
+    <span class="deco d11">🍋</span>
+    <span class="deco d12">🍛</span>
+    <span class="deco d13">🍖</span>
+    
+
+    <div class="hero-inner">
+      <h1>Can Malaysia Feed Itself?</h1>
+      <p class="hero-sub"><em>Spoiler: it depends what's on your plate.</em></p>
+      <p class="hero-body">Your nasi lemak sambal? Imported chilli. Your rendang? Imported beef. Your teh tarik? Imported milk.<br> We ship palm oil to <strong>150 countries</strong> - yet we can't grow enough shallots to season our own food. <br> Malaysia feeds the world. Just not always itself.  </p>
+
+    </div>
+  </section>
+
+  <!-- ========== SECTION 1 ========== -->
+  <section id="section1" class="page-section">
+    <div class="section-pill pill-green">The Big Numbers</div>
+    <h2>We eat a lot.<br>We import a lot more.</h2>
+    <p class="section-intro">Every year, Malaysia's Department of Statistics tracks 60 food commodities - from rice and beef to chilli, shallots and everything in between. What they found might change how you think about the food on your plate.</p>
+    <!-- Stat Cards -->
+    <div class="pure-g stat-cards">
+      <div class="pure-u-1-2 pure-u-md-1-4">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon">💸</span>
+            <span class="card-num">RM55.5B</span>
+          </div>
+          <span class="card-label">spent on food imports in 2020 alone</span>
+        </div>
+      </div>
+      <div class="pure-u-1-2 pure-u-md-1-4">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon">📊</span>
+            <span class="card-num">60</span>
+          </div>
+          <span class="card-label">food commodities tracked by DOSM annually</span>
+        </div>
+      </div>
+      <div class="pure-u-1-2 pure-u-md-1-4">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon">✅</span>
+            <span class="card-num">24 / 60</span>
+          </div>
+          <span class="card-label">foods we are actually self-sufficient in (2024)</span>
+        </div>
+      </div>
+      <div class="pure-u-1-2 pure-u-md-1-4">
+        <div class="card card-red">
+          <div class="card-top">
+            <span class="card-icon">🧅</span>
+            <span class="card-num">99.9%</span>
+          </div>
+          <span class="card-label">of Malaysia's shallots used in dishes are imported</span>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="pure-g chart-row">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div class="chart-box-1">
+          <p class="chart-title">Food Import vs Export Value</p>
+          <p class="chart-sub"><strong>1961 - 2024</strong><br> Malaysia's food import bill has grown faster than its exports over the decades.</p>
+          <div id="chart1" style="min-height: 300px;"></div>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div class="chart-box-1">
+          <p class="chart-title">Malaysia Spends More on Food Than It Earns</p>
+          <p class="chart-sub">The gap between what we spend importing food and what we earn exporting it has grown every decade - we're increasingly dependent on the world to feed us.</p>
+          <div id="chart2" style="min-height: 300px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2 ========== -->
+  <section id="section2" class="page-section bg-amber" style="padding-bottom: 1.8rem;">
+    <div class="section-pill pill-amber">What's On Your Plate?</div>
+    <h2>Your chilli? Imported.<br>Your shallots? <em>Very</em> imported.</h2>
+    <p class="section-intro">Self-sufficiency ratio (SSR) measures how much of what we consume is actually grown here. For some foods the answer is reassuring - for others, it's alarming.</p>
+
+  <!-- Charts 3 + 4 -->
+  <div class="pure-g chart-row">
+    <div class="pure-u-1 w-55">
+      <div class="chart-box-2">
+        <p class="chart-title">Who's Self-Sufficient and Who Isn't?</p>
+        <p class="chart-sub">SSR above 100% means we grow more than we eat. Below 100% means we depend on imports to fill the gap.</p>
+        <div id="chart3"></div>
+      </div>
+    </div>
+    <div class="pure-u-1 w-45">
+      <div class="chart-box">
+        <p class="chart-title">How Self-Sufficient Is Each Food Category?</p>
+        <p class="chart-sub">Average SSR across all commodities in each category - fruits and vegetables perform well, but livestock is dangerously dependent on imports.</p>
+        <div id="chart4"></div>
+      </div>
+      <div class="insight-card">
+        <span class="insight-icon">💡</span>
+        <p>With an average self-sufficiency ratio well below 100%, nearly every piece of meat and glass of milk on a Malaysian table has crossed an international border to get there. Fisheries sit in the middle ground, partly self-sufficient but increasingly reliant on imports as local catches decline. </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart 5: Waffle full width -->
+  <div class="chart-box-3 chart-full">
+    <p class="chart-title">Out of Every 100 Units Consumed, How Many Are Local?</p>
+    <p class="chart-sub">Each square represents 1% of consumption. Green squares are locally produced, red squares are imported.</p>
+    <div id="chart5"></div>
+    <p class="chart-sub-5">The pattern is clear: the closer a food is to the soil, the more likely Malaysia grows it. The closer it is to an animal, the more likely it came from abroad.</p>
+  </div>
+  </section>
+
+  <!-- ========== SECTION 3 ========== -->
+  <section id="section3" class="page-section bg-teal" style="padding-bottom: 0.1rem;">
+    <div class="section-pill pill-teal">The Harvest Map</div>
+    <h2>Kedah grows your rice.<br>Johor grows your pineapple.</h2>
+    <p class="section-intro">Malaysia does grow things — just not always what we need most. Explore crop production across all 16 states and see which regions carry the agricultural load.</p>
+    <div class="chart-box-4 chart-full">
+      <p class="chart-title">Crop Production Across Malaysian States</p>
+      <p class="chart-sub">Darker green = higher production volume. Use the dropdown to explore different crop types across all 16 states.</p>
+      <div id="chart6"></div>
+    </div>
+    <div class="pure-g chart-row">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div class="chart-box">
+          <p class="chart-title">What Does Each State Grow?</p>
+          <p class="chart-sub">Crop type breakdown by state — sorted by total production volume.</p>
+          <div id="chart7"></div>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div class="chart-box">
+          <p class="chart-title">How Have State Rankings Changed?</p>
+          <p class="chart-sub">State production ranking from 2017 to 2022 — which states are rising and which are slipping.</p>
+          <div id="chart8"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4 ========== -->
+  <section id="section4" class="page-section bg-coral">
+    <div class="section-pill pill-coral">The Import Problem</div>
+    <h2>We export palm oil.<br>We import everything else.</h2>
+    <p class="section-intro">Malaysia is a major agricultural exporter — but mostly industrial crops, not food. Meanwhile, the foods Malaysians eat daily flow in from Thailand, Australia, India and beyond.</p>
+    <div class="pure-g chart-row">
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div class="chart-box">
+          <p class="chart-title">Import vs Export — Who's Winning?</p>
+          <p class="chart-sub">Each bubble is a food category. Higher up = more imports. Further right = more exports. Bigger bubble = larger trade gap.</p>
+          <div id="chart9"></div>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div class="chart-box">
+          <p class="chart-title">Malaysia's Growing Import Appetite</p>
+          <p class="chart-sub">Food import quantities by category from 1961 to 2022 — every category is trending upward.</p>
+          <div id="chart10"></div>
+        </div>
+      </div>
+    </div>
+    <div class="chart-box chart-full">
+      <p class="chart-title">Palm Oil: Malaysia's Biggest Export — By Far</p>
+      <p class="chart-sub">The gap between Malaysia's oil exports and imports has grown every decade. While we import almost no oil, we export billions of tonnes — mostly palm oil destined for the world.</p>
+      <div id="chart11"></div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5 ========== -->
+  <section id="section5" class="page-section bg-purple">
+    <div class="section-pill pill-purple">Are We Getting Better?</div>
+    <h2>Some gaps are closing.<br>Others... not so much.</h2>
+    <p class="section-intro">Between 2020 and 2024, some self-sufficiency ratios improved — but livestock and key condiments remain stubbornly import-dependent. Here's how the numbers shifted.</p>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-rice">🌾</div>
+    <div class="footer-inner">
+      <p class="footer-title">Can Malaysia Feed Itself?</p>
+      <p class="footer-sub">A data visualisation on Malaysian food security and agricultural production</p>
+      <div class="footer-sources">
+        <span>Data sources:</span>
+        <a href="https://data.gov.my" target="_blank">DOSM / data.gov.my</a>
+        <span>&amp;</span>
+        <a href="https://www.fao.org/faostat" target="_blank">FAOSTAT, Food and Agriculture Organisation</a>
+      </div>
+      <p class="footer-credit">Visualisation by Raima Makrani · FIT2179 Data Visualisation 2 · Monash University Malaysia · May 2026</p>
+      <p class="footer-ai">AI tools (Claude by Anthropic) were used for code assistance, data structuring, and grammar checking — acknowledged per LearnHQ guidelines.</p>
+    </div>
+  </footer>
+  <script src="js/vega_lite_vis.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "SSR by commodity 2024 — lollipop chart",
+  "width": "container",
+  "height": 550,
+  "data": {
+    "url": "data/ssr_idr_2024_snapshot.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "commodity",
+      "type": "nominal",
+      "sort": { "field": "SSR", "order": "descending" },
+      "title": "Food Commodities",
+      "axis": { "labelFontSize": 12, "labelFont": "DM Sans, sans-serif", "labelColor": "#5F5E5A" }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "SSR",
+          "type": "quantitative"
+        },
+        "x2": {
+          "datum": 0
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": ["self_sufficient", "at_risk", "import_dependent"],
+            "range": ["#5DCAA5", "#FAC775", "#8B0000"] 
+          },
+          "legend": {
+            "title": "Status",
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "values": ["self_sufficient", "at_risk", "import_dependent"],
+            "labelExpr": "datum.label === 'self_sufficient' ? 'Self-sufficient (≥100%)' : datum.label === 'at_risk' ? 'At risk (50–99%)' : 'Import-dependent (<50%)'",
+            "orient": "right",
+            "direction": "vertical"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 80,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "SSR",
+          "type": "quantitative",
+          "title": "Self-Sufficiency Ratio (%)",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "titleColor": "#5F5E5A",
+            "labelColor": "#5F5E5A"
+          }
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": ["self_sufficient", "at_risk", "import_dependent"],
+            "range": ["#5DCAA5", "#FAC775", "#E24B4A"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "commodity", "type": "nominal", "title": "Food" },
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "SSR", "type": "quantitative", "title": "SSR (%)", "format": ".1f" },
+          { "field": "IDR", "type": "quantitative", "title": "Import Dependency (%)", "format": ".1f" },
+          { "field": "status", "type": "nominal", "title": "Status" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 3],
+        "color": "#BA7517",
+        "strokeWidth": 1.5,
+        "opacity": 0.8
+      },
+      "encoding": {
+        "x": { "datum": 100 },
+        "y": { "value": 0 },
+        "y2": { "value": 500 }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "dy": -8,
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "color": "#BA7517"
+      },
+      "encoding": {
+        "x": { "datum": 100 },
+        "y": { "datum": "Chilli" },
+        "text": { "value": "100% threshold" }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": { "stroke": "transparent" },
+    "font": "DM Sans, sans-serif",
+    "axis": { "grid": true, "gridColor": "#F0EDE6", "gridWidth": 1 }
+  }
+}

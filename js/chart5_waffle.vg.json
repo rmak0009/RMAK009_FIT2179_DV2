@@ -1,0 +1,2885 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 220,
+  "data": {
+    "values": [
+      {
+        "category": "Fruits",
+        "square_id": 1,
+        "col": 0,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 2,
+        "col": 1,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 3,
+        "col": 2,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 4,
+        "col": 3,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 5,
+        "col": 4,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 6,
+        "col": 5,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 7,
+        "col": 6,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 8,
+        "col": 7,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 9,
+        "col": 8,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 10,
+        "col": 9,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 11,
+        "col": 10,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 12,
+        "col": 11,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 13,
+        "col": 12,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 14,
+        "col": 13,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 15,
+        "col": 14,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 16,
+        "col": 15,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 17,
+        "col": 16,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 18,
+        "col": 17,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 19,
+        "col": 18,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 20,
+        "col": 19,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 21,
+        "col": 0,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 22,
+        "col": 1,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 23,
+        "col": 2,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 24,
+        "col": 3,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 25,
+        "col": 4,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 26,
+        "col": 5,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 27,
+        "col": 6,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 28,
+        "col": 7,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 29,
+        "col": 8,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 30,
+        "col": 9,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 31,
+        "col": 10,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 32,
+        "col": 11,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 33,
+        "col": 12,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 34,
+        "col": 13,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 35,
+        "col": 14,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 36,
+        "col": 15,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 37,
+        "col": 16,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 38,
+        "col": 17,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 39,
+        "col": 18,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 40,
+        "col": 19,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 41,
+        "col": 0,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 42,
+        "col": 1,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 43,
+        "col": 2,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 44,
+        "col": 3,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 45,
+        "col": 4,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 46,
+        "col": 5,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 47,
+        "col": 6,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 48,
+        "col": 7,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 49,
+        "col": 8,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 50,
+        "col": 9,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 51,
+        "col": 10,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 52,
+        "col": 11,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 53,
+        "col": 12,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 54,
+        "col": 13,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 55,
+        "col": 14,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 56,
+        "col": 15,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 57,
+        "col": 16,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 58,
+        "col": 17,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 59,
+        "col": 18,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 60,
+        "col": 19,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 61,
+        "col": 0,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 62,
+        "col": 1,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 63,
+        "col": 2,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 64,
+        "col": 3,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 65,
+        "col": 4,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 66,
+        "col": 5,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 67,
+        "col": 6,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 68,
+        "col": 7,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 69,
+        "col": 8,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 70,
+        "col": 9,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 71,
+        "col": 10,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 72,
+        "col": 11,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 73,
+        "col": 12,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 74,
+        "col": 13,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 75,
+        "col": 14,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 76,
+        "col": 15,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 77,
+        "col": 16,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 78,
+        "col": 17,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 79,
+        "col": 18,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 80,
+        "col": 19,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 81,
+        "col": 0,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 82,
+        "col": 1,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 83,
+        "col": 2,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 84,
+        "col": 3,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 85,
+        "col": 4,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 86,
+        "col": 5,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 87,
+        "col": 6,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 88,
+        "col": 7,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 89,
+        "col": 8,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 90,
+        "col": 9,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 91,
+        "col": 10,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 92,
+        "col": 11,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 93,
+        "col": 12,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 94,
+        "col": 13,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 95,
+        "col": 14,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 96,
+        "col": 15,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 97,
+        "col": 16,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 98,
+        "col": 17,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 99,
+        "col": 18,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fruits",
+        "square_id": 100,
+        "col": 19,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 1,
+        "col": 0,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 2,
+        "col": 1,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 3,
+        "col": 2,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 4,
+        "col": 3,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 5,
+        "col": 4,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 6,
+        "col": 5,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 7,
+        "col": 6,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 8,
+        "col": 7,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 9,
+        "col": 8,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 10,
+        "col": 9,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 11,
+        "col": 10,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 12,
+        "col": 11,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 13,
+        "col": 12,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 14,
+        "col": 13,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 15,
+        "col": 14,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 16,
+        "col": 15,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 17,
+        "col": 16,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 18,
+        "col": 17,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 19,
+        "col": 18,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 20,
+        "col": 19,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 21,
+        "col": 0,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 22,
+        "col": 1,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 23,
+        "col": 2,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 24,
+        "col": 3,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 25,
+        "col": 4,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 26,
+        "col": 5,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 27,
+        "col": 6,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 28,
+        "col": 7,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 29,
+        "col": 8,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 30,
+        "col": 9,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 31,
+        "col": 10,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 32,
+        "col": 11,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 33,
+        "col": 12,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 34,
+        "col": 13,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 35,
+        "col": 14,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 36,
+        "col": 15,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 37,
+        "col": 16,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 38,
+        "col": 17,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 39,
+        "col": 18,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 40,
+        "col": 19,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 41,
+        "col": 0,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 42,
+        "col": 1,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 43,
+        "col": 2,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 44,
+        "col": 3,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 45,
+        "col": 4,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 46,
+        "col": 5,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 47,
+        "col": 6,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 48,
+        "col": 7,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 49,
+        "col": 8,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 50,
+        "col": 9,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 51,
+        "col": 10,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 52,
+        "col": 11,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 53,
+        "col": 12,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 54,
+        "col": 13,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 55,
+        "col": 14,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 56,
+        "col": 15,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 57,
+        "col": 16,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 58,
+        "col": 17,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 59,
+        "col": 18,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 60,
+        "col": 19,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 61,
+        "col": 0,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 62,
+        "col": 1,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 63,
+        "col": 2,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 64,
+        "col": 3,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 65,
+        "col": 4,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 66,
+        "col": 5,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 67,
+        "col": 6,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 68,
+        "col": 7,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 69,
+        "col": 8,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 70,
+        "col": 9,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 71,
+        "col": 10,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 72,
+        "col": 11,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 73,
+        "col": 12,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 74,
+        "col": 13,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 75,
+        "col": 14,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 76,
+        "col": 15,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 77,
+        "col": 16,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 78,
+        "col": 17,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 79,
+        "col": 18,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 80,
+        "col": 19,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 81,
+        "col": 0,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 82,
+        "col": 1,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 83,
+        "col": 2,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 84,
+        "col": 3,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 85,
+        "col": 4,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 86,
+        "col": 5,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 87,
+        "col": 6,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 88,
+        "col": 7,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 89,
+        "col": 8,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 90,
+        "col": 9,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 91,
+        "col": 10,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 92,
+        "col": 11,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 93,
+        "col": 12,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 94,
+        "col": 13,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 95,
+        "col": 14,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 96,
+        "col": 15,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 97,
+        "col": 16,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 98,
+        "col": 17,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 99,
+        "col": 18,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Vegetables",
+        "square_id": 100,
+        "col": 19,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 1,
+        "col": 0,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 2,
+        "col": 1,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 3,
+        "col": 2,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 4,
+        "col": 3,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 5,
+        "col": 4,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 6,
+        "col": 5,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 7,
+        "col": 6,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 8,
+        "col": 7,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 9,
+        "col": 8,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 10,
+        "col": 9,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 11,
+        "col": 10,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 12,
+        "col": 11,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 13,
+        "col": 12,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 14,
+        "col": 13,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 15,
+        "col": 14,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 16,
+        "col": 15,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 17,
+        "col": 16,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 18,
+        "col": 17,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 19,
+        "col": 18,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 20,
+        "col": 19,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 21,
+        "col": 0,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 22,
+        "col": 1,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 23,
+        "col": 2,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 24,
+        "col": 3,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 25,
+        "col": 4,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 26,
+        "col": 5,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 27,
+        "col": 6,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 28,
+        "col": 7,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 29,
+        "col": 8,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 30,
+        "col": 9,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 31,
+        "col": 10,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 32,
+        "col": 11,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 33,
+        "col": 12,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 34,
+        "col": 13,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 35,
+        "col": 14,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 36,
+        "col": 15,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 37,
+        "col": 16,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 38,
+        "col": 17,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 39,
+        "col": 18,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 40,
+        "col": 19,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 41,
+        "col": 0,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 42,
+        "col": 1,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 43,
+        "col": 2,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 44,
+        "col": 3,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 45,
+        "col": 4,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 46,
+        "col": 5,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 47,
+        "col": 6,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 48,
+        "col": 7,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 49,
+        "col": 8,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 50,
+        "col": 9,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 51,
+        "col": 10,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 52,
+        "col": 11,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 53,
+        "col": 12,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 54,
+        "col": 13,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 55,
+        "col": 14,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 56,
+        "col": 15,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 57,
+        "col": 16,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 58,
+        "col": 17,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 59,
+        "col": 18,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 60,
+        "col": 19,
+        "row": 2,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 61,
+        "col": 0,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 62,
+        "col": 1,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 63,
+        "col": 2,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 64,
+        "col": 3,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 65,
+        "col": 4,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 66,
+        "col": 5,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 67,
+        "col": 6,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 68,
+        "col": 7,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 69,
+        "col": 8,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 70,
+        "col": 9,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 71,
+        "col": 10,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 72,
+        "col": 11,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 73,
+        "col": 12,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 74,
+        "col": 13,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 75,
+        "col": 14,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 76,
+        "col": 15,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 77,
+        "col": 16,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 78,
+        "col": 17,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 79,
+        "col": 18,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 80,
+        "col": 19,
+        "row": 3,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 81,
+        "col": 0,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 82,
+        "col": 1,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 83,
+        "col": 2,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 84,
+        "col": 3,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 85,
+        "col": 4,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 86,
+        "col": 5,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 87,
+        "col": 6,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 88,
+        "col": 7,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 89,
+        "col": 8,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 90,
+        "col": 9,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 91,
+        "col": 10,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 92,
+        "col": 11,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 93,
+        "col": 12,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 94,
+        "col": 13,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 95,
+        "col": 14,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 96,
+        "col": 15,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 97,
+        "col": 16,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 98,
+        "col": 17,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 99,
+        "col": 18,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Livestock",
+        "square_id": 100,
+        "col": 19,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 1,
+        "col": 0,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 2,
+        "col": 1,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 3,
+        "col": 2,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 4,
+        "col": 3,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 5,
+        "col": 4,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 6,
+        "col": 5,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 7,
+        "col": 6,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 8,
+        "col": 7,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 9,
+        "col": 8,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 10,
+        "col": 9,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 11,
+        "col": 10,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 12,
+        "col": 11,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 13,
+        "col": 12,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 14,
+        "col": 13,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 15,
+        "col": 14,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 16,
+        "col": 15,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 17,
+        "col": 16,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 18,
+        "col": 17,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 19,
+        "col": 18,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 20,
+        "col": 19,
+        "row": 0,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 21,
+        "col": 0,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 22,
+        "col": 1,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 23,
+        "col": 2,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 24,
+        "col": 3,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 25,
+        "col": 4,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 26,
+        "col": 5,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 27,
+        "col": 6,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 28,
+        "col": 7,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 29,
+        "col": 8,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 30,
+        "col": 9,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 31,
+        "col": 10,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 32,
+        "col": 11,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 33,
+        "col": 12,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 34,
+        "col": 13,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 35,
+        "col": 14,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 36,
+        "col": 15,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 37,
+        "col": 16,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 38,
+        "col": 17,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 39,
+        "col": 18,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 40,
+        "col": 19,
+        "row": 1,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 41,
+        "col": 0,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 42,
+        "col": 1,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 43,
+        "col": 2,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 44,
+        "col": 3,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 45,
+        "col": 4,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 46,
+        "col": 5,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 47,
+        "col": 6,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 48,
+        "col": 7,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 49,
+        "col": 8,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 50,
+        "col": 9,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 51,
+        "col": 10,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 52,
+        "col": 11,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 53,
+        "col": 12,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 54,
+        "col": 13,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 55,
+        "col": 14,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 56,
+        "col": 15,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 57,
+        "col": 16,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 58,
+        "col": 17,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 59,
+        "col": 18,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 60,
+        "col": 19,
+        "row": 2,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 61,
+        "col": 0,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 62,
+        "col": 1,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 63,
+        "col": 2,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 64,
+        "col": 3,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 65,
+        "col": 4,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 66,
+        "col": 5,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 67,
+        "col": 6,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 68,
+        "col": 7,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 69,
+        "col": 8,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 70,
+        "col": 9,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 71,
+        "col": 10,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 72,
+        "col": 11,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 73,
+        "col": 12,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 74,
+        "col": 13,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 75,
+        "col": 14,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 76,
+        "col": 15,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 77,
+        "col": 16,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 78,
+        "col": 17,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 79,
+        "col": 18,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 80,
+        "col": 19,
+        "row": 3,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 81,
+        "col": 0,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 82,
+        "col": 1,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 83,
+        "col": 2,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 84,
+        "col": 3,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 85,
+        "col": 4,
+        "row": 4,
+        "fill_status": "Local"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 86,
+        "col": 5,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 87,
+        "col": 6,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 88,
+        "col": 7,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 89,
+        "col": 8,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 90,
+        "col": 9,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 91,
+        "col": 10,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 92,
+        "col": 11,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 93,
+        "col": 12,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 94,
+        "col": 13,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 95,
+        "col": 14,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 96,
+        "col": 15,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 97,
+        "col": 16,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 98,
+        "col": 17,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 99,
+        "col": 18,
+        "row": 4,
+        "fill_status": "Imported"
+      },
+      {
+        "category": "Fisheries",
+        "square_id": 100,
+        "col": 19,
+        "row": 4,
+        "fill_status": "Imported"
+      }
+    ]
+  },
+  "facet": {
+    "field": "category",
+    "type": "nominal",
+    "header": {
+      "title": null,
+      "labelFont": "DM Sans, sans-serif",
+      "labelFontSize": 13,
+      "labelColor": "#5F5E5A",
+      "labelFontWeight": "bold"
+    }
+  },
+  "spec": {
+    "width": 220,
+    "height": 80,
+    "mark": {
+      "type": "rect",
+      "cornerRadius": 2,
+      "width": 10,
+      "height": 12
+    },
+    "encoding": {
+      "x": {
+        "field": "col",
+        "type": "ordinal",
+        "axis": null
+      },
+      "y": {
+        "field": "row",
+        "type": "ordinal",
+        "axis": null,
+        "sort": "descending"
+      },
+      "color": {
+        "field": "fill_status",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            "Local",
+            "Imported"
+          ],
+          "range": [
+            "#5DCAA5",
+            "#E24B4A"
+          ]
+        },
+        "legend": {
+          "title": null,
+          "labelFont": "DM Sans, sans-serif",
+          "labelFontSize": 11,
+          "orient": "top"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "category",
+          "type": "nominal",
+          "title": "Category"
+        },
+        {
+          "field": "fill_status",
+          "type": "nominal",
+          "title": "Source"
+        }
+      ]
+    }
+  },
+  "config": {
+    "background": "#FFFFFF",
+    "view": {
+      "stroke": "transparent"
+    },
+    "font": "DM Sans, sans-serif",
+    "facet": {
+      "spacing": 24
+    }
+  }
+}

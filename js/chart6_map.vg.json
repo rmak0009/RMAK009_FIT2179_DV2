@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "params": [
+    {
+      "name": "crop_selection",
+      "value": "total_production",
+      "bind": {
+        "input": "select",
+        "options": ["total_production", "paddy_production", "fruits_production", "vegetables_production", "coconut_production", "spices_production", "herbs_production", "cash_crops_production", "industrial_crops_production"],
+        "labels": ["All Crops", "Paddy (Rice)", "Fruits", "Vegetables", "Coconut", "Spices", "Herbs", "Cash Crops", "Industrial Crops"],
+        "name": "Select Crop Type: "
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "js/malaysia.topojson",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.Name",
+          "from": {
+            "data": {"url": "data/map_crop_data.csv"},
+            "key": "state",
+            "fields": ["total_production", "total_area", "paddy_production", "fruits_production", "vegetables_production", "coconut_production", "spices_production", "herbs_production", "cash_crops_production", "industrial_crops_production"]
+          }
+        },
+        {
+          "fold": ["total_production", "paddy_production", "fruits_production", "vegetables_production", "coconut_production", "spices_production", "herbs_production", "cash_crops_production", "industrial_crops_production"],
+          "as": ["crop_key", "crop_value"]
+        },
+        {
+          "filter": "datum.crop_key == crop_selection"
+        },
+        {
+          "calculate": "datum.crop_value + 1",
+          "as": "crop_value"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "color": {
+          "field": "crop_value",
+          "type": "quantitative",
+          "title": "Production (tonnes)",
+          "scale": {
+            "type": "sqrt",
+            "scheme": "greens"
+          },
+          "legend": {
+            "title": "Production (tonnes)",
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelFontSize": 10,
+            "orient": "bottom-right",
+            "format": "~s"
+          }
+        },
+        "tooltip": [
+          {"field": "properties.Name", "type": "nominal", "title": "State"},
+          {"field": "crop_value", "type": "quantitative", "title": "Production (tonnes)", "format": ",.0f"},
+          {"field": "total_production", "type": "quantitative", "title": "Total All Crops (tonnes)", "format": ",.0f"},
+          {"field": "total_area", "type": "quantitative", "title": "Total Planted Area (ha)", "format": ",.0f"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#EDF5DC",
+    "view": {"stroke": "transparent"},
+    "font": "DM Sans, sans-serif"
+  }
+}

@@ -1,0 +1,31 @@
+commodity,category,SSR,IDR,status
+Sugarcane,Other Crops,179.7,0.0,self_sufficient
+Duck Meat,Livestock,129.9,0.0,self_sufficient
+French Bean,Vegetables,122.8,0.0,self_sufficient
+Watermelon,Fruits,123.1,0.0,self_sufficient
+Starfruit,Fruits,124.1,0.0,self_sufficient
+Papaya,Fruits,142.4,0.0,self_sufficient
+Tuna,Fisheries,108.3,0.0,self_sufficient
+Chicken and Duck Eggs,Livestock,107.0,0.0,self_sufficient
+Tomato,Vegetables,113.0,0.0,self_sufficient
+Spinach,Vegetables,107.1,0.0,self_sufficient
+Long Bean,Vegetables,107.1,0.0,self_sufficient
+Sweet Corn,Fruits,113.9,0.0,self_sufficient
+Jackfruit,Fruits,110.1,0.0,self_sufficient
+Durian,Fruits,103.7,0.0,self_sufficient
+Dragon Fruit,Fruits,102.9,0.0,self_sufficient
+Pineapple,Fruits,102.1,0.0,self_sufficient
+Guava,Fruits,102.1,0.0,self_sufficient
+Cucumber,Vegetables,105.7,0.0,self_sufficient
+Lady Finger,Vegetables,104.6,0.0,self_sufficient
+Lettuce,Vegetables,104.2,0.0,self_sufficient
+Brinjal,Vegetables,104.1,0.0,self_sufficient
+Crab,Fisheries,100.5,0.0,self_sufficient
+River Catfish,Fisheries,100.0,0.0,self_sufficient
+Rice,Other Crops,71.7,28.3,at_risk
+Mango,Fruits,20.6,79.4,import_dependent
+Seabass,Fisheries,12.3,87.7,import_dependent
+Beef and Buffalo,Livestock,16.5,83.5,import_dependent
+Chilli,Vegetables,35.8,64.2,import_dependent
+Mutton,Livestock,7.9,92.1,import_dependent
+Shallot,Vegetables,0.01,99.99,import_dependent

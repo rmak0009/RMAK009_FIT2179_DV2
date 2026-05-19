@@ -1,0 +1,210 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 400,
+  "data": {
+    "url": "data/ssr_idr_malaysia.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2020 || datum.year == 2024"
+    },
+    {
+      "filter": "datum.commodity == 'Chilli' || datum.commodity == 'Beef and Buffalo' || datum.commodity == 'Mutton' || datum.commodity == 'Duck Meat' || datum.commodity == 'Chicken and Duck Eggs' || datum.commodity == 'Tuna' || datum.commodity == 'Mango' || datum.commodity == 'Papaya' || datum.commodity == 'Watermelon'"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleFont": "DM Sans, sans-serif",
+            "titleColor": "#5F5E5A",
+            "labelFontSize": 13,
+            "ticks": false,
+            "grid": false,
+            "domain": false
+          }
+        },
+        "y": {
+          "field": "SSR",
+          "type": "quantitative",
+          "title": "SSR (%)",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "gridColor": "#F0EDE6",
+            "gridDash": [3, 3],
+            "tickCount": 5
+          }
+        },
+        "color": {
+          "field": "commodity",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Chilli", "Beef and Buffalo", "Mutton", "Duck Meat", "Chicken & Duck Eggs", "Tuna", "Mango", "Papaya", "Watermelon"],
+            "range": ["#C94E24", "#8B0000", "#A0522D", "#C17D00", "#E07B00", "#0072B2", "#F5A623", "#FF6B9D", "#3B9E3B"]
+          },
+          "legend": null
+        },
+        "detail": {
+          "field": "commodity",
+          "type": "nominal"
+        },
+        "tooltip": [
+          { "field": "commodity", "type": "nominal", "title": "Food" },
+          { "field": "year", "type": "ordinal", "title": "Year" },
+          { "field": "SSR", "type": "quantitative", "title": "SSR (%)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 60
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "SSR",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "commodity",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Chilli", "Beef and Buffalo", "Mutton", "Duck Meat", "Chicken and Duck Eggs", "Tuna", "Mango", "Papaya", "Watermelon"],
+            "range": ["#C94E24", "#8B0000", "#A0522D", "#C17D00", "#E07B00", "#0072B2", "#F5A623", "#FF6B9D", "#3B9E3B"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 10,
+        "font": "DM Sans, sans-serif"
+      },
+      "transform": [
+        { "filter": "datum.year == 2024 && datum.commodity != 'Tuna' && datum.commodity != 'Chicken and Duck Eggs' && datum.commodity != 'Duck Meat' && datum.commodity != 'Papaya'" }
+      ],
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal"},
+        "y": { "field": "SSR", "type": "quantitative" },
+        "text": { "field": "commodity", "type": "nominal" },
+        "color": {
+          "field": "commodity",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Chilli", "Beef and Buffalo", "Mutton", "Duck Meat", "Chicken & Duck Eggs", "Tuna", "Mango", "Papaya", "Watermelon"],
+            "range": ["#C94E24", "#8B0000", "#A0522D", "#C17D00", "#E07B00", "#0072B2", "#F5A623", "#FF6B9D", "#3B9E3B"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -14,
+        "fontSize": 10,
+        "font": "DM Sans, sans-serif"
+      },
+      "transform": [
+        { "filter": "datum.year == 2024 && datum.commodity == 'Tuna'" }
+      ],
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal"},
+        "y": { "field": "SSR", "type": "quantitative" },
+        "text": { "field": "commodity", "type": "nominal" },
+        "color": { "value": "#0072B2" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": 14,
+        "fontSize": 10,
+        "font": "DM Sans, sans-serif"
+      },
+      "transform": [
+        { "filter": "datum.year == 2024 && datum.commodity == 'Chicken and Duck Eggs'" },
+        { "calculate": "'Eggs'", "as": "short_label" }
+      ],
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "SSR", "type": "quantitative" },
+        "text": { "field": "short_label", "type": "nominal" },
+        "color": { "value": "#E07B00" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -6,
+        "fontSize": 10,
+        "font": "DM Sans, sans-serif"
+      },
+      "transform": [
+        { "filter": "datum.year == 2024 && datum.commodity == 'Duck Meat'" }
+      ],
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "SSR", "type": "quantitative" },
+        "text": { "field": "commodity", "type": "nominal" },
+        "color": { "value": "#C17D00" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": 6,
+        "fontSize": 10,
+        "font": "DM Sans, sans-serif"
+      },
+      "transform": [
+        { "filter": "datum.year == 2024 && datum.commodity == 'Papaya'" }
+      ],
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "SSR", "type": "quantitative" },
+        "text": { "field": "commodity", "type": "nominal" },
+        "color": { "value": "#FF6B9D" }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": { "stroke": "transparent" },
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/FAOSTAT_data_en_5-14-2026.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Item == 'Food Excluding Fish' && (datum.Element == 'Import value' || datum.Element == 'Export value')"
+    },
+    {
+      "calculate": "datum.Value / 1000000",
+      "as": "value_billions"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "point": false
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": -45,
+            "labelFontSize": 10,
+            "labelFont": "DM Sans, sans-serif",
+            "labelColor": "#5A5855",
+            "titleColor": "#5F5E5A",
+            "grid": false,
+            "labelOverlap": true,
+            "labelBound": true
+          }
+        },
+        "y": {
+          "field": "value_billions",
+          "type": "quantitative",
+          "title": "USD Billions",
+          "axis": {
+            "format": ".1f",
+            "labelFontSize": 10,
+            "labelFont": "DM Sans, sans-serif",
+            "labelColor": "#5A5855",
+            "titleFont": "DM Sans, sans-serif",
+            "titleColor": "#5A5855",
+            "gridColor": "#F0EDE6",
+            "gridDash": [3, 3],
+            "tickCount": 4
+          }
+        },
+        "color": {
+          "field": "Element",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Import value", "Export value"],
+            "range": ["#8B0000", "#0072B2"]
+          },
+          "legend": {
+            "title": null,
+            "labelFont": "DM Sans, sans-serif",
+            "labelFontSize": 11,
+            "orient": "top-left"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "opacity": 0,
+        "size": 100
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "value_billions",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Element",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Import value", "Export value"],
+            "range": ["#C94E24", "#3B6D11"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "Year", "type": "ordinal", "title": "Year" },
+          { "field": "Element", "type": "nominal", "title": "Type" },
+          { "field": "value_billions", "type": "quantitative", "title": "Value (USD Billions)", "format": ".2f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -80,
+        "dy": -20,
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "font": "DM Sans, sans-serif",
+        "color": "#3B6D11"
+      },
+      "transform": [
+        {
+          "filter": "datum.Element == 'Export value'"
+        },
+        {
+          "window": [{"op": "max", "field": "value_billions", "as": "max_val"}],
+          "frame": [null, null]
+        },
+        {
+          "filter": "datum.value_billions == datum.max_val"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "value_billions",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "⬆️ 34,233% rise since 1961"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": { "stroke": "transparent" },
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    },
+    "legend": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    },
+    "text": {
+      "font": "DM Sans, sans-serif"
+    }
+  }
+}

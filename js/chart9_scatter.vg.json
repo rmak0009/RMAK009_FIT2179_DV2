@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 350,
+  "data": {
+    "url": "data/FAOSTAT_data_en_5-14-2026.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Element == 'Import quantity' && datum.Year == 2022"
+    },
+    {
+      "filter": "datum.Item != 'Food Excluding Fish' && datum.Item != 'Fruit and Vegetables' && datum.Item != 'Meat and Meat Preparations' && datum.Item != 'Dairy Products, milk equivalent' && datum.Item != 'Vegetable Oil and Fat'"
+    },
+    {
+      "lookup": "Item",
+      "from": {
+        "data": {"url": "data/FAOSTAT_data_en_5-14-2026.csv"},
+        "key": "Item",
+        "fields": ["Value"],
+        "filter": "datum.Element == 'Export quantity' && datum.Year == 2022"
+      },
+      "as": ["export_qty"],
+      "default": "0"
+    },
+    {
+      "calculate": "datum.Value",
+      "as": "import_qty"
+    },
+    {
+      "calculate": "isValid(datum.export_qty) ? toNumber(datum.export_qty) : 0",
+      "as": "export_qty_num"
+    },
+    {
+      "calculate": "datum.Item == 'Beef and Buffalo Meat, primary' || datum.Item == 'Sheep and Goat Meat' || datum.Item == 'Poultry Meat' || datum.Item == 'Other Meat' || datum.Item == 'Meat, Poultry' ? 'Meat' : datum.Item == 'Dairy Products' || datum.Item == 'Eggs' ? 'Dairy & Eggs' : datum.Item == 'Fruit' || datum.Item == 'Vegetables' ? 'Fruit & Vegetables' : 'Grains, Sugar & Nuts'",
+      "as": "category"
+    }
+  ],
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "#fff",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "export_qty_num",
+      "type": "quantitative",
+      "title": "Export Quantity (tonnes)",
+      "scale": {"domain": [0, 500000]},
+      "axis": {
+        "labelFont": "DM Sans, sans-serif",
+        "titleFont": "DM Sans, sans-serif",
+        "labelColor": "#5F5E5A",
+        "titleColor": "#5F5E5A",
+        "gridColor": "#F0EDE6",
+        "gridDash": [3, 3],
+        "format": "~s",
+        "values": [0, 100000, 200000, 300000, 400000, 500000]
+      }
+    },
+    "y": {
+      "field": "import_qty",
+      "type": "quantitative",
+      "title": "Import Quantity (tonnes)",
+      "axis": {
+        "labelFont": "DM Sans, sans-serif",
+        "titleFont": "DM Sans, sans-serif",
+        "labelColor": "#5F5E5A",
+        "titleColor": "#5F5E5A",
+        "gridColor": "#F0EDE6",
+        "gridDash": [3, 3],
+        "format": "~s",
+        "tickCount": 8
+      }
+    },
+    "size": {
+      "field": "import_qty",
+      "type": "quantitative",
+      "scale": {"range": [100, 2000]},
+      "legend": null
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Meat", "Dairy & Eggs", "Fruit & Vegetables", "Grains, Sugar & Nuts"],
+        "range": ["#C94E24", "#0072B2", "#3B6D11", "#9A9793"]
+      },
+      "legend": {
+        "title": "Category",
+        "labelFont": "DM Sans, sans-serif",
+        "titleFont": "DM Sans, sans-serif",
+        "labelFontSize": 10,
+        "orient": "right"
+      }
+    },
+    "tooltip": [
+      {"field": "Item", "type": "nominal", "title": "Food Item"},
+      {"field": "category", "type": "nominal", "title": "Category"},
+      {"field": "import_qty", "type": "quantitative", "title": "Import Qty (tonnes)", "format": ",.0f"},
+      {"field": "export_qty_num", "type": "quantitative", "title": "Export Qty (tonnes)", "format": ",.0f"}
+    ]
+  },
+  "config": {
+    "background": "#FFFFFF",
+    "view": {"stroke": "transparent"},
+    "font": "DM Sans, sans-serif"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/FAOSTAT_data_en_5-14-2026.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Item == 'Food Excluding Fish' && (datum.Element == 'Import value' || datum.Element == 'Export value')"
+    },
+    {
+      "pivot": "Element",
+      "value": "Value",
+      "groupby": ["Year"]
+    },
+    {
+      "calculate": "datum['Import value'] - datum['Export value']",
+      "as": "trade_deficit"
+    },
+    {
+      "calculate": "datum.trade_deficit / 1000000",
+      "as": "deficit_billions"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "line": true,
+        "color": "#C94E24",
+        "fillOpacity": 0.15,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {
+            "labelFontSize": 10,
+            "labelFont": "DM Sans, sans-serif",
+            "labelColor": "#5A5855",
+            "titleFont": "DM Sans, sans-serif",
+            "titleColor": "#5A5855",
+            "grid": false,
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "deficit_billions",
+          "type": "quantitative",
+          "title": "Trade Deficit (USD Billions)",
+          "axis": {
+            "format": ".1f",
+            "labelFontSize": 10,
+            "labelFont": "DM Sans, sans-serif",
+            "labelColor": "#5A5855",
+            "titleFont": "DM Sans, sans-serif",
+            "titleColor": "#5A5855",
+            "gridColor": "#F0EDE6",
+            "gridDash": [3, 3],
+            "tickCount": 4
+          }
+        },
+        "tooltip": [
+          { "field": "Year", "type": "quantitative", "title": "Year", "format": "d" },
+          { "field": "deficit_billions", "type": "quantitative", "title": "Trade Deficit (USD Billions)", "format": ".2f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -8,
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "font": "DM Sans, sans-serif",
+        "color": "#C94E24"
+      },
+      "transform": [
+        {
+          "window": [{"op": "max", "field": "deficit_billions", "as": "max_deficit"}],
+          "frame": [null, null]
+        },
+        {
+          "filter": "datum.deficit_billions == datum.max_deficit"
+        }
+      ],
+      "encoding": {
+        "x": { "field": "Year", "type": "quantitative" },
+        "y": { "field": "deficit_billions", "type": "quantitative" },
+        "text": { "value": "↑ Widest gap" }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": { "stroke": "transparent" },
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    }
+  }
+}

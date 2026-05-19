@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/ssr_idr_2024_snapshot.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {"op": "mean", "field": "SSR", "as": "avg_SSR"}
+      ],
+      "groupby": ["category"]
+    },
+    {
+      "calculate": "datum.avg_SSR >= 100 ? 'self_sufficient' : datum.avg_SSR >= 50 ? 'at_risk' : 'import_dependent'",
+      "as": "status"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 4,
+        "cornerRadiusTopRight": 4
+      },
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type": "nominal",
+          "title": "Food Categories",
+          "sort": { "field": "avg_SSR", "order": "descending" },
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "labelFontSize": 11,
+            "ticks": false,
+            "domain": false
+          }
+        },
+        "y": {
+          "field": "avg_SSR",
+          "type": "quantitative",
+          "title": "Average SSR (%)",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "gridColor": "#F0EDE6",
+            "gridDash": [3, 3],
+            "tickCount": 5
+          }
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": ["self_sufficient", "at_risk", "import_dependent"],
+            "range": ["#5DCAA5", "#FAC775", "#E24B4A"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "avg_SSR", "type": "quantitative", "title": "Avg SSR (%)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 3],
+        "color": "#BA7517",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": { "datum": 100 }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -4,
+        "dy": -6,
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "font": "DM Sans, sans-serif",
+        "color": "#BA7517"
+      },
+      "encoding": {
+        "y": { "datum": 100 },
+        "x": { "datum": "Vegetables" },
+        "text": { "value": "100% threshold" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -6,
+        "fontSize": 10,
+        "font": "DM Sans, sans-serif",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "avg_SSR", "order": "descending" }
+        },
+        "y": {
+          "field": "avg_SSR",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "avg_SSR",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": ["self_sufficient", "at_risk", "import_dependent"],
+            "range": ["#5DCAA5", "#FAC775", "#E24B4A"]
+          },
+          "legend": null
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": { "stroke": "transparent" },
+    "font": "DM Sans, sans-serif",
+    "axis": {
+      "labelFont": "DM Sans, sans-serif",
+      "titleFont": "DM Sans, sans-serif"
+    }
+  }
+}

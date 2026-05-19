@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 350,
+  "data": {
+    "url": "data/FAOSTAT_data_en_5-14-2026.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Element == 'Import quantity'"
+    },
+    {
+      "filter": "datum.Item != 'Food Excluding Fish' && datum.Item != 'Fruit and Vegetables' && datum.Item != 'Meat and Meat Preparations' && datum.Item != 'Dairy Products, milk equivalent'"
+    },
+    {
+      "calculate": "datum.Item == 'Beef and Buffalo Meat, primary' || datum.Item == 'Sheep and Goat Meat' || datum.Item == 'Poultry Meat' || datum.Item == 'Other Meat' || datum.Item == 'Meat, Poultry' ? 'Meat' : datum.Item == 'Dairy Products' || datum.Item == 'Eggs' ? 'Dairy & Eggs' : datum.Item == 'Fruit' || datum.Item == 'Vegetables' ? 'Fruit & Vegetables' : datum.Item == 'Vegetable Oil and Fat' ? 'Oils & Fats' : 'Grains, Sugar & Nuts'",
+      "as": "category"
+    },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Value", "as": "total_import"}
+      ],
+      "groupby": ["category", "Year"]
+    },
+    {
+      "calculate": "datum.total_import / 1000",
+      "as": "import_thousands"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "point": false
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "grid": false,
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "import_thousands",
+          "type": "quantitative",
+          "title": "Import Quantity (000 tonnes)",
+          "axis": {
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelColor": "#5F5E5A",
+            "titleColor": "#5F5E5A",
+            "gridColor": "#F0EDE6",
+            "gridDash": [3, 3],
+            "tickCount": 5,
+            "format": ",.0f"
+          }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Meat", "Dairy & Eggs", "Fruit & Vegetables", "Oils & Fats", "Grains, Sugar & Nuts"],
+            "range": ["#C94E24", "#0072B2", "#3B6D11", "#E07B00", "#D3D1C7"]
+          },
+          "legend": {
+            "title": "Category",
+            "labelFont": "DM Sans, sans-serif",
+            "titleFont": "DM Sans, sans-serif",
+            "labelFontSize": 10,
+            "orient": "top-left"
+          }
+        },
+        "detail": {"field": "category", "type": "nominal"},
+        "tooltip": [
+          {"field": "category", "type": "nominal", "title": "Category"},
+          {"field": "Year", "type": "quantitative", "title": "Year", "format": "d"},
+          {"field": "import_thousands", "type": "quantitative", "title": "Import Qty (000 tonnes)", "format": ",.1f"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "view": {"stroke": "transparent"},
+    "font": "DM Sans, sans-serif"
+  }
+}
